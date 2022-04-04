@@ -8,8 +8,11 @@ module.exports = {
 
     extend: {
       screens: {
-        '2xs': '320px',
-        xs: '480px',
+        '5xs': '340px',
+        '4xs': '400px',
+        '3xs': '480px',
+        '2xs': '560px',
+        xs: '560px',
       },
 
       colors: {
@@ -28,14 +31,14 @@ module.exports = {
         },
       },
 
-      fontFamily: {},
+      fontFamily: {
+        gilroy: ['Gilroy', 'sans-serif'],
+      },
 
       backgroundImage: {
         'primary-gradient': 'linear-gradient(90deg, #E49547 0%, #FFB977 100%)',
         'accent-gradient': 'linear-gradient(90deg, #04363D 0%, #216771 100%)',
       },
-
-      boxShadow: {},
     },
   },
 

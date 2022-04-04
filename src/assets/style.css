@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts (Always keep it at the end of the stylesheet) */
+@layer base {
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+}

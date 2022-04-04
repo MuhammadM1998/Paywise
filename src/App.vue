@@ -1,9 +1,14 @@
 <template>
-  <div></div>
+  <IntroSection></IntroSection>
 </template>
 
 <script>
-  console.log('hi');
+  import IntroSection from './modules/IntroSection.vue';
+  export default { components: { IntroSection } };
 </script>
 
-<style></style>
+<style>
+  body {
+    @apply font-gilroy;
+  }
+</style>
