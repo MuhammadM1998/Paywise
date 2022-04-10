@@ -1,5 +1,5 @@
 <template>
-  <header id="header">
+  <header id="header" ref="header">
     <div class="wrapper">
       <!-- Logo -->
       <a href="#" aria-label="Paywise Logo">
@@ -14,38 +14,49 @@
         <!-- Hamburger Menu -->
         <tilt-burger
           id="hamburger"
+          ref="hamburger"
           label="Hamburger Menu"
           class="xl:hidden"
           @click="toggleNavMenu"
         ></tilt-burger>
 
-        <ul id="nav-menu" :class="{ active: isNavVisible }">
+        <ul id="nav-menu" ref="navMenu" :class="{ active: isNavVisible }">
           <li>
-            <a href="#home" class="nav-link">Home</a>
+            <a href="#home" class="nav-link" @click="closeNavMenu">Home</a>
           </li>
 
           <li>
-            <a href="#perks" class="nav-link">Perks</a>
+            <a href="#perks" class="nav-link" @click="closeNavMenu">Perks</a>
           </li>
 
           <li>
-            <a href="#partners" class="nav-link">Partners</a>
+            <a href="#partners" class="nav-link" @click="closeNavMenu"
+              >Partners</a
+            >
           </li>
 
           <li>
-            <a href="#about-us" class="nav-link">About Us</a>
+            <a href="#about-us" class="nav-link" @click="closeNavMenu"
+              >About Us</a
+            >
           </li>
 
           <li>
-            <a href="#loan-calculator" class="nav-link">Loan Calculator</a>
+            <a href="#loan-calculator" class="nav-link" @click="closeNavMenu"
+              >Loan Calculator</a
+            >
           </li>
 
           <li>
-            <a href="#our-results" class="nav-link">Our Results</a>
+            <a href="#our-results" class="nav-link" @click="closeNavMenu"
+              >Our Results</a
+            >
           </li>
 
           <li>
-            <a href="#newsletter" class="nav-link">Newsletter</a>
+            <a href="#newsletter" class="nav-link" @click="closeNavMenu"
+              >Newsletter</a
+            >
           </li>
 
           <!-- Buttons -->
@@ -74,9 +85,32 @@
 
     computed: {},
 
+    created() {
+      window.addEventListener('scroll', this.handleStickyHeader);
+      window.addEventListener('DOMContentLoaded', this.handleStickyHeader);
+    },
+
     methods: {
       toggleNavMenu() {
         this.isNavVisible = !this.isNavVisible;
+      },
+
+      closeNavMenu() {
+        this.$refs.hamburger.removeAttribute('pressed');
+        this.$refs.navMenu.classList.remove('active');
+      },
+
+      handleStickyHeader() {
+        this.$refs.header.classList.remove('page-end');
+        this.$refs.header.classList.toggle('sticky', window.scrollY > 0);
+
+        const endOfPage =
+          window.scrollY >= document.body.clientHeight - window.innerHeight;
+        if (endOfPage) {
+          this.$refs.header.classList.remove('sticky');
+          this.$refs.header.classList.add('page-end');
+          this.closeNavMenu();
+        }
       },
 
       openModal() {
@@ -114,7 +148,7 @@
   }
 
   #header.sticky #nav-menu {
-    @apply top-12;
+    @apply top-16;
   }
 
   #nav-menu.active {
