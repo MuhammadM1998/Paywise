@@ -1,12 +1,28 @@
 <template>
   <IntroSection></IntroSection>
   <PerksSection></PerksSection>
+  <PartnersSection></PartnersSection>
+  <AboutUsSection></AboutUsSection>
+  <ResultsSection></ResultsSection>
+  <PageHeaderTest title="Title Test" text="text"></PageHeaderTest>
 </template>
 
 <script>
   import IntroSection from './modules/IntroSection.vue';
   import PerksSection from './modules/PerksSection.vue';
-  export default { components: { IntroSection, PerksSection } };
+  import PartnersSection from './modules/PartnersSection.vue';
+  import AboutUsSection from './modules/AboutUsSection.vue';
+  import ResultsSection from './modules/ResultsSection.vue';
+
+  export default {
+    components: {
+      IntroSection,
+      PerksSection,
+      AboutUsSection,
+      PartnersSection,
+      ResultsSection,
+    },
+  };
 </script>
 
 <style>
@@ -18,19 +34,31 @@
     @apply font-gilroy;
   }
 
-  .section {
-    @apply py-16 flex flex-col gap-6;
+  .wrapper {
+    @apply container mx-auto;
   }
 
-  .wrapper {
-    @apply container mx-auto text-center;
+  .section {
+    @apply pt-16 pb-8 flex flex-col gap-6;
+  }
+
+  .section .wrapper {
+    @apply px-8 flex flex-col gap-6 container mx-auto;
   }
 
   .section-title {
-    @apply text-2xl font-black  text-transparent bg-clip-text bg-gradient-to-br from-primary-300 to-primary-200;
+    @apply text-center text-2xl font-black  text-transparent bg-clip-text bg-gradient-to-br from-primary-300 to-primary-200;
   }
 
   .section-subtitle {
-    @apply text-sm font-medium text-gray-80;
+    @apply text-sm font-medium text-gray-80 text-center;
+  }
+
+  .link {
+    @apply text-primary-100 hover:text-primary-300;
+  }
+
+  .base-medium {
+    @apply text-base font-medium text-gray-80;
   }
 </style>
