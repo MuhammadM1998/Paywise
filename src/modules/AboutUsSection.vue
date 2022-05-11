@@ -31,11 +31,11 @@
 
 <style scoped>
   #about-us {
-    @apply grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-6 pb-0;
+    @apply grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 pb-0  items-center;
   }
 
   .title {
-    @apply order-2 row-span-1;
+    @apply lg:order-2 row-span-1  lg:self-end;
   }
 
   .section-title {
@@ -43,11 +43,11 @@
   }
 
   .img-card {
-    @apply order-1 row-span-6;
+    @apply order-1 row-span-3;
   }
 
   .text-card {
-    @apply order-3 row-span-5;
+    @apply order-3 row-span-2  lg:self-start;
   }
 
   .img {

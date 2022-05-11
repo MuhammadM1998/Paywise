@@ -4,7 +4,9 @@
   <PartnersSection></PartnersSection>
   <AboutUsSection></AboutUsSection>
   <ResultsSection></ResultsSection>
-  <PageHeaderTest title="Title Test" text="text"></PageHeaderTest>
+  <NewsletterSection></NewsletterSection>
+  <FooterSection></FooterSection>
+  <MyCard></MyCard>
 </template>
 
 <script>
@@ -13,6 +15,9 @@
   import PartnersSection from './modules/PartnersSection.vue';
   import AboutUsSection from './modules/AboutUsSection.vue';
   import ResultsSection from './modules/ResultsSection.vue';
+  import NewsletterSection from './modules/NewsletterSection.vue';
+  import FooterSection from './modules/FooterSection.vue';
+  import MyCard from './components/MyCard.vue';
 
   export default {
     components: {
@@ -21,6 +26,9 @@
       AboutUsSection,
       PartnersSection,
       ResultsSection,
+      NewsletterSection,
+      FooterSection,
+      MyCard,
     },
   };
 </script>

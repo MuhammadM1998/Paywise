@@ -4,7 +4,7 @@
       <!-- Logo -->
       <a href="#" aria-label="Paywise Logo">
         <img
-          src="../assets/images/shared/Paywise-Logo.svg"
+          src="../assets/images/shared/Paywise-Logo-White.svg"
           alt="Paywise Logo"
         />
       </a>
