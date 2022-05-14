@@ -8,7 +8,9 @@
 
 <script>
   export default {
-    props: { mode: { type: String, default: 'outlined' } },
+    props: {
+      mode: { type: String, default: 'outlined' },
+    },
   };
 </script>
 
@@ -20,11 +22,16 @@
   .text {
     @apply uppercase py-2 px-4 hover:font-bold;
   }
+
   .text.outlined {
     @apply bg-accent-20 text-primary-100;
   }
 
-  .text.filled {
+  .text.filled-g {
     @apply text-accent-20;
+  }
+
+  .text.filled-w {
+    @apply text-white;
   }
 </style>

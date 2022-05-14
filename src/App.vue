@@ -3,6 +3,7 @@
   <PerksSection></PerksSection>
   <PartnersSection></PartnersSection>
   <AboutUsSection></AboutUsSection>
+  <LoanSection></LoanSection>
   <ResultsSection></ResultsSection>
   <NewsletterSection></NewsletterSection>
   <FooterSection></FooterSection>
@@ -15,6 +16,7 @@
   import PartnersSection from './modules/PartnersSection.vue';
   import AboutUsSection from './modules/AboutUsSection.vue';
   import ResultsSection from './modules/ResultsSection.vue';
+  import LoanSection from './modules/LoanSection.vue';
   import NewsletterSection from './modules/NewsletterSection.vue';
   import FooterSection from './modules/FooterSection.vue';
   import MyCard from './components/MyCard.vue';
@@ -26,6 +28,7 @@
       AboutUsSection,
       PartnersSection,
       ResultsSection,
+      LoanSection,
       NewsletterSection,
       FooterSection,
       MyCard,
@@ -47,7 +50,7 @@
   }
 
   .section {
-    @apply pt-16 pb-8 flex flex-col gap-6;
+    @apply py-16 flex flex-col gap-6;
   }
 
   .section .wrapper {

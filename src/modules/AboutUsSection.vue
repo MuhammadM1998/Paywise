@@ -31,7 +31,7 @@
 
 <style scoped>
   #about-us {
-    @apply grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 pb-0  items-center;
+    @apply grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3  items-center lg:py-0;
   }
 
   .title {

@@ -62,23 +62,29 @@
           <!-- Buttons -->
           <div class="buttons-wrapper">
             <BaseButton mode="outlined" @click="openModal">Log In</BaseButton>
-            <BaseButton mode="filled" @click="openModal">Sign Up</BaseButton>
+            <BaseButton mode="filled-g" @click="openModal">Sign Up</BaseButton>
           </div>
         </ul>
       </nav>
     </div>
   </header>
 
-  <BaseModal :show="!!isModalActive" @close="closeModal"></BaseModal>
+  <BaseDialog
+    :show="isModalActive"
+    title="This feature is not ready yet!"
+    @close="closeModal"
+  >
+    More features are coming soon. Including Users Auth (Login & Sign Up), Loan
+    Requests, and a Complete User Banking Dashboard. Stay Tuned!
+  </BaseDialog>
 </template>
 
 <script>
   import 'vanilla-hamburger/tilt-burger.js';
   import BaseButton from './base/BaseButton.vue';
-  import BaseModal from '../components/base/BaseModal.vue';
 
   export default {
-    components: { BaseButton, BaseModal },
+    components: { BaseButton },
     data() {
       return { isNavVisible: false, isModalActive: false };
     },
@@ -116,6 +122,7 @@
       openModal() {
         this.isModalActive = true;
       },
+
       closeModal() {
         this.isModalActive = false;
       },

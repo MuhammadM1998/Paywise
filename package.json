@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueform/slider": "^2.0.9",
     "vanilla-hamburger": "^0.2.3",
     "vue": "^3.2.25"
   },

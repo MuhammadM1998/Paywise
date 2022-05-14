@@ -20,7 +20,7 @@ module.exports = {
           300: '#E49547',
           200: '#FFB977',
           100: '#E4AD78',
-          20: '#FFFBF6',
+          20: '#FFF5E8',
         },
         accent: {
           100: '#04363D',
@@ -44,5 +44,5 @@ module.exports = {
     },
   },
 
-  plugins: [],
+  plugins: [require('@vueform/slider/tailwind')],
 };

@@ -10,7 +10,7 @@
 
       <form>
         <input type="text" />
-        <BaseButton mode="filled">Subscribe</BaseButton>
+        <BaseButton mode="filled-w" @click.prevent>Subscribe</BaseButton>
       </form>
     </div>
   </section>
@@ -25,6 +25,10 @@
 </script>
 
 <style scoped>
+  #newsletter {
+    @apply bg-primary-20;
+  }
+
   form {
     @apply flex items-center justify-center gap-4 flex-col lg:flex-row;
   }

@@ -22,19 +22,19 @@
               <p class="font-black text-gray-100">16519</p>
             </a>
 
-            <a href="">
+            <a href="#">
               <img src="../assets/images/shared/Facebook.svg" alt="Facebook" />
             </a>
 
-            <a href="">
+            <a href="#">
               <img src="../assets/images/shared/youtube.svg" alt="Youtube" />
             </a>
 
-            <a href="">
+            <a href="#">
               <img src="../assets/images/shared/linkedin.svg" alt="LinkedIn" />
             </a>
 
-            <a href="">
+            <a href="#">
               <img
                 src="../assets/images/shared/instagram.svg"
                 alt="Instagram"

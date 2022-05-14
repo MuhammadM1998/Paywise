@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-0 section">
+  <div class="pb-0 section bg-primary-20">
     <div class="wrapper">
       <div class="flex flex-col items-center gap-3">
         <div>

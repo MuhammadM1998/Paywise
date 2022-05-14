@@ -1,9 +1,9 @@
 <template>
-  <div id="home">
+  <section id="home">
     <the-header></the-header>
 
     <!-- Hero -->
-    <section class="hero">
+    <div class="hero">
       <div class="text">
         <h1 class="text-5xl font-black lg:text-7xl">
           Chase Your Dream with us
@@ -15,8 +15,10 @@
 
         <!-- Buttons -->
         <div class="buttons-wrapper">
-          <BaseButton mode="filled" @click="openModal">Download App</BaseButton>
-          <BaseButton mode="outlined" @click="openModal"
+          <BaseButton mode="filled-g" fill="accent" @click="openModal"
+            >Download App</BaseButton
+          >
+          <BaseButton mode="outlined" fill="none" @click="openModal"
             >Loan Calculator</BaseButton
           >
         </div>
@@ -28,19 +30,19 @@
             <p>16519</p>
           </div>
 
-          <a href="">
+          <a href="#">
             <img src="../assets/images/shared/Facebook.svg" alt="Facebook" />
           </a>
 
-          <a href="">
+          <a href="#">
             <img src="../assets/images/shared/youtube.svg" alt="Youtube" />
           </a>
 
-          <a href="">
+          <a href="#">
             <img src="../assets/images/shared/linkedin.svg" alt="LinkedIn" />
           </a>
 
-          <a href="">
+          <a href="#">
             <img src="../assets/images/shared/instagram.svg" alt="Instagram" />
           </a>
         </div>
@@ -53,27 +55,36 @@
           alt="Paywise. Chase your dreams with us."
         />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <BaseModal :show="!!isModalActive" @close="closeModal"></BaseModal>
-  </div>
+  <BaseDialog
+    :show="isModalActive"
+    title="This feature is not ready yet!"
+    @close="closeModal"
+  >
+    More features are coming soon. Including Users Auth (Login & Sign Up), Loan
+    Requests, and a Complete User Banking Dashboard. Stay Tuned!
+  </BaseDialog>
 </template>
 
 <script>
   import TheHeader from '../components/TheHeader.vue';
   import BaseButton from '../components/base/BaseButton.vue';
-  import BaseModal from '../components/base/BaseModal.vue';
   export default {
-    components: { TheHeader, BaseButton, BaseModal },
+    components: { TheHeader, BaseButton },
 
     data() {
-      return { isModalActive: false };
+      return {
+        isModalActive: false,
+      };
     },
 
     methods: {
       openModal() {
         this.isModalActive = true;
       },
+
       closeModal() {
         this.isModalActive = false;
       },
