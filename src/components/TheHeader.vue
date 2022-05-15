@@ -15,7 +15,6 @@
         <tilt-burger
           id="hamburger"
           ref="hamburger"
-          label="Hamburger Menu"
           class="xl:hidden"
           @click="toggleNavMenu"
         ></tilt-burger>
@@ -88,8 +87,6 @@
     data() {
       return { isNavVisible: false, isModalActive: false };
     },
-
-    computed: {},
 
     created() {
       window.addEventListener('scroll', this.handleStickyHeader);

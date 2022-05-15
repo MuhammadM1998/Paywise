@@ -9,7 +9,7 @@
       </p>
 
       <form>
-        <input type="text" />
+        <input type="email" aria-label="Email Address" />
         <BaseButton mode="filled-w" @click.prevent>Subscribe</BaseButton>
       </form>
     </div>

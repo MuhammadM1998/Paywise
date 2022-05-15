@@ -17,7 +17,7 @@
 
           <!-- Links -->
           <div class="flex gap-2">
-            <a class="flex gap-2 pr-4 border-r border-gray-100">
+            <a href="#" class="flex gap-2 pr-4 border-r border-gray-100">
               <img src="../assets/images/shared/Phone.svg" alt="Phone" />
               <p class="font-black text-gray-100">16519</p>
             </a>
