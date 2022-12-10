@@ -6,7 +6,7 @@ Modern bank landing page, dashboard coming soon.
 
 ### 🔗 Links
 
-- [Live Site](https://paywise-55367.web.app/)
+- [Live Site](https://paywise.vercel.app/)
 - [Source Repo](https://github.com/MuhammadM1998/Paywise)
 
 ### ‍💻 Project Stack
